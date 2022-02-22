@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8019016A27C56D0F00D3C1DA /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019016927C56D0F00D3C1DA /* RemoteFeedLoaderTests.swift */; };
 		808BE65C27C128E500FE9F52 /* Essential_Feed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808BE65327C128E400FE9F52 /* Essential_Feed.framework */; };
-		808BE66127C128E500FE9F52 /* Essential_FeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BE66027C128E500FE9F52 /* Essential_FeedTests.swift */; };
 		808BE66227C128E500FE9F52 /* Essential_Feed.h in Headers */ = {isa = PBXBuildFile; fileRef = 808BE65627C128E400FE9F52 /* Essential_Feed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		808BE66C27C128F500FE9F52 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BE66B27C128F500FE9F52 /* FeedItem.swift */; };
 		808BE66E27C12AA800FE9F52 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BE66D27C12AA800FE9F52 /* FeedLoader.swift */; };
@@ -25,10 +25,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8019016927C56D0F00D3C1DA /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		808BE65327C128E400FE9F52 /* Essential_Feed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Essential_Feed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		808BE65627C128E400FE9F52 /* Essential_Feed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Essential_Feed.h; sourceTree = "<group>"; };
 		808BE65B27C128E500FE9F52 /* Essential FeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Essential FeedTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		808BE66027C128E500FE9F52 /* Essential_FeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Essential_FeedTests.swift; sourceTree = "<group>"; };
 		808BE66B27C128F500FE9F52 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		808BE66D27C12AA800FE9F52 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +82,7 @@
 		808BE65F27C128E500FE9F52 /* Essential FeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				808BE66027C128E500FE9F52 /* Essential_FeedTests.swift */,
+				8019016927C56D0F00D3C1DA /* RemoteFeedLoaderTests.swift */,
 			);
 			path = "Essential FeedTests";
 			sourceTree = "<group>";
@@ -162,6 +162,7 @@
 					};
 					808BE65A27C128E500FE9F52 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -215,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				808BE66127C128E500FE9F52 /* Essential_FeedTests.swift in Sources */,
+				8019016A27C56D0F00D3C1DA /* RemoteFeedLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,14 +415,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QBBC83ZP74;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sebpi.Essential-FeedTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -430,10 +438,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QBBC83ZP74;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sebpi.Essential-FeedTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
