@@ -2,7 +2,7 @@
   
 
 # Essential Feed App - Image Feed Feature
-
+[![Build Status](https://app.travis-ci.com/sebspi/essential-feed-case-study.svg?branch=main)](https://app.travis-ci.com/sebspi/essential-feed-case-study)
   
 
 ## BDD Specs
