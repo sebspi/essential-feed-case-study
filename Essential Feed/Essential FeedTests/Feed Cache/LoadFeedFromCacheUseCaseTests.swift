@@ -70,6 +70,8 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         })
     }
     
+    
+    
     // MARK: - Helpers
     
     private func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #filePath, line: UInt = #line) -> (sut: LocalFeedLoader, store: FeedStoreSpy) {
