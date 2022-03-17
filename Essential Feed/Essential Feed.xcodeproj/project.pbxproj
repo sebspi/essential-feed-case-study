@@ -115,11 +115,11 @@
 		8019016B27C573DA00D3C1DA /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
-				8019016C27C573EA00D3C1DA /* RemoteFeedLoader.swift */,
-				8075ABE027CA1D0E0030ABC7 /* HTTPClient.swift */,
 				8075ABE227CA1E790030ABC7 /* FeedItemsMapper.swift */,
+				8075ABE027CA1D0E0030ABC7 /* HTTPClient.swift */,
 				8075ABEA27CA78430030ABC7 /* URLSessionHTTPClient.swift */,
 				807E4B2827DCABBF00451D8C /* RemoteFeedItem.swift */,
+				8019016C27C573EA00D3C1DA /* RemoteFeedLoader.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -145,9 +145,9 @@
 		807E4B2327DC996C00451D8C /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
-				807E4B2427DC997D00451D8C /* LocalFeedLoader.swift */,
 				807E4B2627DC99C600451D8C /* FeedStore.swift */,
 				807E4B2A27DCABF900451D8C /* LocalFeedImage.swift */,
+				807E4B2427DC997D00451D8C /* LocalFeedLoader.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
