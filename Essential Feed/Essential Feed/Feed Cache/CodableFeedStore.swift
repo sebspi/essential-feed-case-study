@@ -1,14 +1,6 @@
-//
-//  CodableFeedStore.swift
-//  Essential Feed
-//
-//  Created by Sebastian Spies on 19.03.22.
-//
-
 import Foundation
 
-public class CodableFeedStore: FeedStore {
-    
+public final class CodableFeedStore: FeedStore {
     private struct Cache: Codable {
         let feed: [CodableFeedImage]
         let timestamp: Date
@@ -66,7 +58,7 @@ public class CodableFeedStore: FeedStore {
             do {
                 let encoder = JSONEncoder()
                 let cache = Cache(feed: feed.map(CodableFeedImage.init), timestamp: timestamp)
-                let encoded = try! encoder.encode(cache)
+                let encoded = try encoder.encode(cache)
                 try encoded.write(to: storeURL)
                 completion(nil)
             } catch {
@@ -81,6 +73,7 @@ public class CodableFeedStore: FeedStore {
             guard FileManager.default.fileExists(atPath: storeURL.path) else {
                 return completion(nil)
             }
+            
             do {
                 try FileManager.default.removeItem(at: storeURL)
                 completion(nil)
