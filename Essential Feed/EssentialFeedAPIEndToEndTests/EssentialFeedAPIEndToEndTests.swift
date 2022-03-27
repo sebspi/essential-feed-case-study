@@ -31,7 +31,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func getFeedResult(file: StaticString = #filePath, line: UInt = #line) -> LoadFeedResult? {
+    private func getFeedResult(file: StaticString = #filePath, line: UInt = #line) -> FeedLoader.Result? {
         let testServerURL = URL(string: "https://static1.squarespace.com/static/5891c5b8d1758ec68ef5dbc2/t/5c52cdd0b8a045df091d2fff/1548930512083/feed-case-study-test-api-feed.json")!
         let client = URLSessionHTTPClient(session: .init(configuration: .ephemeral))
         let loader = RemoteFeedLoader(url: testServerURL, client: client)
@@ -40,7 +40,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
         
         let exp = expectation(description: "Wait for load completion")
         
-        var receivedResult: LoadFeedResult?
+        var receivedResult: FeedLoader.Result?
         loader.load(completion: { result in
             receivedResult = result
             exp.fulfill()
