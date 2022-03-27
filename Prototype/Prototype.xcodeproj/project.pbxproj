@@ -14,6 +14,7 @@
 		80705B2327F080D8009A4F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80705B2127F080D8009A4F77 /* LaunchScreen.storyboard */; };
 		80705B2B27F083B6009A4F77 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80705B2A27F083B6009A4F77 /* FeedViewController.swift */; };
 		80705B2D27F0849F009A4F77 /* FeedImageViewModel+PrototypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80705B2C27F0849F009A4F77 /* FeedImageViewModel+PrototypeData.swift */; };
+		80705B2F27F08511009A4F77 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80705B2E27F08511009A4F77 /* FeedImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		80705B2427F080D8009A4F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80705B2A27F083B6009A4F77 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		80705B2C27F0849F009A4F77 /* FeedImageViewModel+PrototypeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageViewModel+PrototypeData.swift"; sourceTree = "<group>"; };
+		80705B2E27F08511009A4F77 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				80705B2427F080D8009A4F77 /* Info.plist */,
 				80705B2A27F083B6009A4F77 /* FeedViewController.swift */,
 				80705B2C27F0849F009A4F77 /* FeedImageViewModel+PrototypeData.swift */,
+				80705B2E27F08511009A4F77 /* FeedImageCell.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				80705B2B27F083B6009A4F77 /* FeedViewController.swift in Sources */,
 				80705B1927F080D6009A4F77 /* SceneDelegate.swift in Sources */,
 				80705B2D27F0849F009A4F77 /* FeedImageViewModel+PrototypeData.swift in Sources */,
+				80705B2F27F08511009A4F77 /* FeedImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
