@@ -12,7 +12,7 @@ public final class LocalFeedLoader: FeedLoader {
     private let store: FeedStore
     private let currentDate: () -> Date
 
-    public typealias SaveResult = Error?
+    public typealias SaveResult = Result<Void, Error>
     public typealias LoadResult = FeedLoader.Result
     
     public init(store: FeedStore, currentDate: @escaping () -> Date) {
@@ -21,12 +21,14 @@ public final class LocalFeedLoader: FeedLoader {
     }
     
     public func save(_ feed: [FeedImage], completion: @escaping (SaveResult) -> Void) {
-        store.deleteCachedFeed { [weak self] error in
+        store.deleteCachedFeed { [weak self] deletionResult in
             guard let self = self else { return }
-            if let cacheDeletionError = error {
-                completion(cacheDeletionError)
-            } else {
+            
+            switch deletionResult {
+            case .success:
                 self.cache(feed, with: completion)
+            case let .failure(error):
+                completion(.failure(error))
             }
         }
     }
